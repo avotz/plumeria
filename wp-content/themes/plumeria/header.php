@@ -24,7 +24,9 @@
 	 	<div class="header-btn-menu">
 		   
 		 </div>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header-logo"><img src="<?php echo get_template_directory_uri();  ?>/img/logo.png" alt="Plumeria Rentals" /></a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header-logo"><img src="<?php echo get_template_directory_uri();  ?>/img/logo.png" alt="Plumeria Rentals" />
+			<span>Plumeria Rentals</span>
+		</a>
 	</header>
 	<button id="btn-menu" class="nav-btn-menu">
 	     <i class="fa fa-bars"></i>

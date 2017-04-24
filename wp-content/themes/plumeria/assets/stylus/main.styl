@@ -116,10 +116,23 @@ img
 	&-logo
 		display inline-block
 		background-color white
-		width 15rem
+		width 8rem
 		text-align center
-		padding .96rem 0 //2.65rem 0
+		padding .2rem 0 //2.65rem 0
 		float left
+		&:hover
+			span
+				color #43998D
+		img
+			max-width 35.6%//46.6%
+			
+		span
+			text-transform uppercase
+			color #000
+			display block
+			font-size 11px
+			margin-top -10px
+			font-weight 700
 	
 	&-btn-menu
 		background-color black
@@ -247,8 +260,14 @@ body
 @media screen and (min-width: 768px)
 	.header
 		&-logo
-			padding 1.96rem 0 //2.65rem 0
+			padding .4rem 15px //2.65rem 0
+			width 10rem
+			img
+				max-width 46.6%
 			
+			span
+				font-size 13px
+				margin-top 0px
 		
 		&-btn-menu
 			width 112px//135px
@@ -295,8 +314,8 @@ body
 @media screen and (min-width: 1200px)
 	.header
 		&-logo
-			padding 2.25rem 0
-			
+			padding .23rem 0
+			width 10rem
 		&-btn-menu
 			width 120px
 			height 120px
@@ -308,8 +327,8 @@ body
 @media screen and (min-width: 1400px)
 	.header
 		&-logo
-			padding 2.65rem 0
-			
+			//padding .4rem 0
+			width 12rem
 		&-btn-menu
 			width 135px
 			height 135px

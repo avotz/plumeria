@@ -832,10 +832,24 @@ img {
 .header-logo {
   display: inline-block;
   background-color: #fff;
-  width: 15rem;
+  width: 8rem;
   text-align: center;
-  padding: 0.96rem 0;
+  padding: 0.2rem 0;
   float: left;
+}
+.header-logo:hover span {
+  color: #43998d;
+}
+.header-logo img {
+  max-width: 35.6%;
+}
+.header-logo span {
+  text-transform: uppercase;
+  color: #000;
+  display: block;
+  font-size: 11px;
+  margin-top: -10px;
+  font-weight: 700;
 }
 .header-btn-menu {
   background-color: #000;
@@ -1022,7 +1036,15 @@ body.nav-is-open .nav-btn-menu .fa-bars:before {
 }
 @media screen and (min-width: 768px) {
   .header-logo {
-    padding: 1.96rem 0;
+    padding: 0.4rem 15px;
+    width: 10rem;
+  }
+  .header-logo img {
+    max-width: 46.6%;
+  }
+  .header-logo span {
+    font-size: 13px;
+    margin-top: 0px;
   }
   .header-btn-menu {
     width: 112px;
@@ -1070,7 +1092,8 @@ body.nav-is-open .nav-btn-menu .fa-bars:before {
 }
 @media screen and (min-width: 1200px) {
   .header-logo {
-    padding: 2.25rem 0;
+    padding: 0.23rem 0;
+    width: 10rem;
   }
   .header-btn-menu {
     width: 120px;
@@ -1083,7 +1106,7 @@ body.nav-is-open .nav-btn-menu .fa-bars:before {
 }
 @media screen and (min-width: 1400px) {
   .header-logo {
-    padding: 2.65rem 0;
+    width: 12rem;
   }
   .header-btn-menu {
     width: 135px;
