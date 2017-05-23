@@ -31,18 +31,18 @@ get_header(); ?>
 		  	  		
 		  	  	</div>
 	  	  </div>
-	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner2.jpg');">
+	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner3.jpg');">
 	  	  		<div class="inner">
 		  	  		<div class="item-info">
 		  	  			<span >We are</span>
-		  	  			<p>building experts</p>
+		  	  			<p>rental experts</p>
 		  	  			
 		  	  		</div>
 		  	  		
 		  	  		
 		  	  	</div>
 	  	  </div>
-	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner3.jpg');">
+	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner2.jpg');">
 	  	  		<div class="inner">
 		  	  		<div class="item-info">
 		  	  			<span >Our rental </span>

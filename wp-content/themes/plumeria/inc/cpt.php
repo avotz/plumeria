@@ -38,7 +38,24 @@ function plumeria_register_meta_boxes( $meta_boxes ) {
                 'std'   => '',
                 'class' => 'custom-class',
                 'clone' => false,
-            ),/*
+            ),
+              array(
+                'name'  => 'PDF',
+                'desc'  => 'Format: PDF File',
+                'id'    => $prefix . 'pdf_thumb',
+                'type'  => 'file_advanced',
+                'std'   => '',
+                'class' => 'custom-class'
+                
+            ),
+            // OEMBED
+            array(
+              'name' => 'video',
+              'id'   =>  $prefix. "video",
+              'type' => 'oembed',
+            ),
+           
+            /*
              array(
                 'name'  => __( 'Extras', 'textdomain' ),
                 'desc'  => '',

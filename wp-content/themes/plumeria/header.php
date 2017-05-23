@@ -44,14 +44,15 @@
           ?>
 		<aside class="nav-aside">
 			<ul class="social">
-				<li><a href="#" class="social-item"><i class="icon-facebook"></i></a></li>
-				<li><a href="#" class="social-item"><i class="icon-twitter"></i></a></li>
-				<li><a href="#" class="social-item"><i class="fa fa-google-plus"></i></a></li>
-				<li><a href="#" class="social-item"><i class="fa fa-instagram"></i></a></li>
-				<li><a href="#" class="social-item"><i class="fa fa-tripadvisor"></i></a></li>
+				<li><a href="https://www.facebook.com/plumeriarentals" class="social-item" target="_blank"><i class="icon-facebook"></i></a></li>
+				<li><a href="https://twitter.com/PlumeriaRentals" class="social-item" target="_blank"><i class="icon-twitter"></i></a></li>
+				<li><a href="https://www.youtube.com/channel/UC0BnW5TF27-xNwc_K3gDBbA" class="social-item" target="_blank"><i class="fa fa-youtube"></i></a></li>
+				<!-- <li><a href="#" class="social-item" target="_blank"><i class="fa fa-google-plus"></i></a></li> -->
+				<li><a href="https://www.instagram.com/plumeriarentals/" class="social-item" target="_blank"><i class="fa fa-instagram"></i></a></li>
+				<!-- <li><a href="#" class="social-item" target="_blank"><i class="fa fa-tripadvisor"></i></a></li> -->
 			</ul>
 			<div class="copy">
-				<span>&copy; 2017<?php echo (date('Y') == '2017') ? '' : ' - '.date('Y'); ?></span>
+				<span>&copy; <?php echo date('Y'); ?></span>
 			</div>
 		</aside>
 	</div>

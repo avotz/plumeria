@@ -27,6 +27,10 @@
 			</div>
 			<div class="column">
 				<?php echo rwmb_meta( 'rw_info2'); ?>
+				<div class="video">
+					<?php echo rwmb_meta( 'rw_video'); ?>
+					
+				</div>
 			</div>
 			<div class="column">
 				<div class="content-description">

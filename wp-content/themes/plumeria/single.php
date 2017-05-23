@@ -36,7 +36,17 @@ get_header(); ?>
 			</section>
 			<header class="entry-header">
 				<div class="inner-wrapper">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?> 
+					<?php
+					   $files = rwmb_meta( 'rw_pdf_thumb');
+					 
+					  if ( !empty( $files ) ) {
+						    foreach ( $files as $file ) : ?>
+						        <a title="<?php echo $file['name']; ?>" href="<?php echo $file['url']; ?>" class="btn btn-black btn-pdf" target="_blank">Download PDF Info</a>
+						 <?php endforeach; 
+						}
+
+					?>
 				</div>
 			</header>
 			<div class="inner-wrapper">
@@ -79,17 +89,17 @@ get_header(); ?>
 						</div>
 						<div class="column about">
 								
-							<img src="<?php echo get_template_directory_uri();  ?>/img/user-200x200.png" alt="user">
-							<h6>Lorem ipsum dolor sit amet</h6>
-							<p>P: <a href="tel:2222-2222">2222-2222</a></p>
-							<p>E: <a href="mailto:info@plumeria.com">info@plumeria.com</a></p>
+							<img src="<?php echo get_template_directory_uri();  ?>/img/contact-photo.jpg" alt="user">
+							<h6>Carole Gateau - Nestor Zeledón</h6>
+							<p>P: <a href="tel:(506) 8867-0268">(506) 8867-0268</a> - <a href="tel:(506) 8329-8484">(506) 8329-8484</a></p>
+							<p>E: <a href="mailto:reservations@plumeriarentalscr.com">reservations@plumeriarentalscr.com</a></p>
 							<br>
 							<p>
-							<img src="<?php echo get_template_directory_uri();  ?>/img/user-200x200.png" alt="user">
+							<!-- <img src="<?php echo get_template_directory_uri();  ?>/img/contact-photo.jpg" alt="user">
 							</p>
 							<h6>Lorem ipsum dolor sit amet</h6>
-							<p>P: <a href="tel:2222-2222">2222-2222</a></p>
-							<p>E: <a href="mailto:info@plumeria.com">info@plumeria.com</a></p>
+							<p>P: <a href="tel:(506) 8329-8484">(506) 8329-8484</a></p>
+							<p>E: <a href="mailto:reservations@plumeriarentalscr.com">reservations@plumeriarentalscr.com</a></p> -->
 						</div>
 						<div class="column">
 							 <h3>Fill out your details</h3>

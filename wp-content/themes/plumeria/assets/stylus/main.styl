@@ -3,12 +3,12 @@
 @import "icons.styl"
 
 
-celeste = #0092bf
+azul = #1E7BB4
 gris = #565960
 naranja = #ff730b
 verde = #549E51
-azul = #151380
 amarillo = #EFCF5B
+turquesa = #3D9B8D
 
 *
 	box-sizing border-box
@@ -82,7 +82,7 @@ img
 	transform translateZ(0)
 	background-color transparent
 	&:hover
-		background-color: naranja 
+		background-color: azul 
 		color white
 		border-color transparent
 .btn-yellow
@@ -91,13 +91,27 @@ img
 	&:hover
 		background-color: #CA5541
 
-.wpcf7-submit
+
 .btn-black
 	background-color #000
 	padding 8px 30px 8px
 	&:hover
 		background-color: #777779
+.wpcf7-submit
+.btn-turquesa
+	background-color turquesa
+	padding 8px 30px 8px
+	&:hover
+		background-color: azul
+		
+.btn-pdf
+	position static
 	
+@media screen and (min-width: 540px)
+	.btn-pdf
+		position absolute
+		right 1rem
+		top 2.5rem
 .inner
 	max-width 1600px
 	margin 0 auto
@@ -213,7 +227,7 @@ body
 			font-weight 700
 			font-size 1.6rem
 			&:hover
-				color naranja
+				color turquesa
 				margin-left 1rem
 	&-aside
 		display block
@@ -588,6 +602,7 @@ article.page
 	.entry-header
 		background-color white
 		padding 2rem 0
+		position relative
 	.entry-title
 		margin-bottom 0
 		text-transform uppercase
@@ -638,6 +653,10 @@ article.page
 			margin-bottom .5rem
 			li
 				color #555
+	.video
+		iframe
+			width 100%
+			height 250px
 @media screen and (min-width: 1000px)
 	.property-contact-container
 	.property-container
@@ -733,6 +752,20 @@ article.page
 			vertical-align middle
 			&:hover
 				color #ADC100
+
+.pagination
+	h2
+		display none
+	.nav-links
+		padding-bottom 1rem
+		text-align center
+		.page-numbers
+			display inline-block
+			background-color black
+			color white
+			padding .5rem 1rem
+			&.current
+				opacity .5
 		
 			
 				
