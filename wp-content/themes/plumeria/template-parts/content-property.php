@@ -28,7 +28,11 @@
 			<div class="column">
 				<?php echo rwmb_meta( 'rw_info2'); ?>
 				<div class="video">
-					<?php echo rwmb_meta( 'rw_video'); ?>
+					<?php 
+						if(rwmb_meta( 'rw_video'))
+							echo rwmb_meta( 'rw_video'); 
+
+						?>
 					
 				</div>
 			</div>
