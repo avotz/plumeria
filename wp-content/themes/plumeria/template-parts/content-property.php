@@ -29,7 +29,8 @@
 				<?php echo rwmb_meta( 'rw_info2'); ?>
 				<div class="video">
 					<?php 
-						if(rwmb_meta( 'rw_video'))
+						
+						if(rwmb_meta( 'rw_video') != "Embed HTML not available.")
 							echo rwmb_meta( 'rw_video'); 
 
 						?>
