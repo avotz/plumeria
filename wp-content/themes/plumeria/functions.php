@@ -127,6 +127,13 @@ function my_add_excerpts_to_pages() {
      add_post_type_support( 'properties', 'excerpt' );
 }
 
+
+function pupung_hide_youtube_related_videos($data, $url, $args = array()) {
+$data = preg_replace('/(youtube\.com.*)(\?feature=oembed)(.*)/', '$1?' . apply_filters("hyrv_extra_querystring_parameters", "wmode=transparent&amp;") . 'rel=0$3', $data);
+return $data;
+}
+add_filter('oembed_result', 'pupung_hide_youtube_related_videos', 10, 3);
+
 /**
  * Implement the Custom Header feature.
  */

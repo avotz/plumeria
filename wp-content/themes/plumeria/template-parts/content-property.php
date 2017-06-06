@@ -30,8 +30,12 @@
 				<div class="video">
 					<?php 
 						
-						if(rwmb_meta( 'rw_video') != "Embed HTML not available.")
-							echo rwmb_meta( 'rw_video'); 
+						if(rwmb_meta( 'rw_video') != "Embed HTML not available."){
+							//$url = get_post_meta( get_the_ID(), 'rw_video', true );
+							//echo wp_oembed_get( $url, array('rel=0') ); 
+							echo rwmb_meta( 'rw_video');
+							 
+						}
 
 						?>
 					
