@@ -22,11 +22,11 @@
 					<li><?php echo $terms[0]->name ?></li>
 				</ul>
 				
-			    <?php echo rwmb_meta( 'rw_info1'); ?>
+			    <?php echo do_shortcode(rwmb_meta( 'rw_info1')); ?>
 					
 			</div>
 			<div class="column">
-				<?php echo rwmb_meta( 'rw_info2'); ?>
+				<?php echo do_shortcode(rwmb_meta( 'rw_info2')); ?>
 				<div class="video">
 					<?php 
 						
@@ -34,7 +34,7 @@
 							//$url = get_post_meta( get_the_ID(), 'rw_video', true );
 							//echo wp_oembed_get( $url, array('rel=0') ); 
 							echo rwmb_meta( 'rw_video');
-							 
+
 						}
 
 						?>
