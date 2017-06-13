@@ -1294,6 +1294,7 @@ body.nav-is-open .nav-btn-menu .fa-bars:before {
   }
   .banner .item-info h1 {
     font-size: 4rem;
+    line-height: 4rem;
   }
   .banner .item-info p {
     font-size: 3.5rem;
