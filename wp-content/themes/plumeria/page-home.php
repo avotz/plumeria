@@ -16,15 +16,33 @@ get_header(); ?>
 
 	<section class="banner">
 		<div class="banner-properties-link">
-			<a href="#properties" class="anchor btn">Properties</a>
+			<a href="#properties" class="anchor btn">
+				<?php  if(get_locale() == "es_ES"){ ?>
+				         Propiedades
+				        <?php } if(get_locale() == "en_US") { ?>
+					         Properties
+				       <?php } if(get_locale() == "fr_FR") { ?>
+				       		 Propriétés
+				       <?php } ?> 
+			</a>
 		</div>
 		<div class="owl-carousel ">
 	  	 
 	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner1.jpg');">
 	  	  		<div class="inner">
 		  	  		<div class="item-info">
-		  	  			<span >Quality</span>
-		  	  			<p>matters to us</p>
+		  	  			<?php  if(get_locale() == "es_ES"){ ?>
+				          <span >Calidad</span>
+			  	  			<p>Nos Importa</p>
+				        <?php } if(get_locale() == "en_US") { ?>
+					         <span >Quality</span>
+			  	  			<p>matters to us</p>
+				       <?php } if(get_locale() == "fr_FR") { ?>
+				       		 <span >Qualité</span>
+			  	  			<p>nous importe</p>
+				          
+				       <?php } ?> 
+		  	  			
 		  	  			
 		  	  		</div>
 		  	  		
@@ -34,8 +52,18 @@ get_header(); ?>
 	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner3.jpg');">
 	  	  		<div class="inner">
 		  	  		<div class="item-info">
-		  	  			<span >We are</span>
-		  	  			<p>rental experts</p>
+		  	  			<?php if(get_locale() == "es_ES"){ ?>
+				          <span >Somos</span>
+		  	  			<p> Expertos en alquiler</p>
+				        <?php } if(get_locale() == "en_US") { ?>
+					         <span >We are</span>
+		  	  				<p>rental experts</p>
+				       <?php } if(get_locale() == "fr_FR") { ?>
+				       		 <span>Nous sommes</span>
+			  	  			<p>Experts en location</p>
+				          
+				       <?php } ?> 
+		  	  			
 		  	  			
 		  	  		</div>
 		  	  		
@@ -45,8 +73,18 @@ get_header(); ?>
 	  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner2.jpg');">
 	  	  		<div class="inner">
 		  	  		<div class="item-info">
-		  	  			<span >Our rental </span>
+		  	  			<?php if(get_locale() == "es_ES"){ ?>
+				           <span >Con nuestro alquiler </span>
+		  	  				<p> Los huéspedes disfrutan de la libertad</p>
+				        <?php } if(get_locale() == "en_US") { ?>
+					         <span >Our rental </span>
 		  	  			<p> guests enjoy the freedom</p>
+				       <?php } if(get_locale() == "fr_FR") { ?>
+				       		 <span >Notre location</span>
+			  	  			<p>Les invités profitent de la liberté</p>
+				          
+				       <?php } ?> 
+		  	  			
 		  	  			
 		  	  		</div>
 		  	  		
@@ -101,13 +139,24 @@ get_header(); ?>
 								<h6><?php echo $terms[0]->name ?></h6>
 								<hr>
 								<?php the_excerpt() ?>
-								<a href="<?php the_permalink(); ?>" class="btn">Read more</a>
+									
+								<a href="<?php the_permalink(); ?>" class="btn">
+								 	<?php  if(get_locale() == "es_ES"){ ?>
+							        	 Leer más
+							        <?php } if(get_locale() == "en_US") { ?>
+								         Read more
+							       <?php } if(get_locale() == "fr_FR") { ?>
+							       		Lire la suite
+							       <?php } ?> 
+
+								 </a>
 							</div>
 						</div>
                            
                           
                           
                         <?php
+
                          $left_or_right = ('right'==$left_or_right) ? 'left' : 'right'; 
                       }
                     }

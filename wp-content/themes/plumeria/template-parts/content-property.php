@@ -16,7 +16,14 @@
 	<div class="entry-content">
 		<div class="property-container">
 			<div class="column">
-				<h3>Property Type</h3> 
+				<?php  if(get_locale() == "es_ES"){ ?>
+			        	 <h3>Tipo de propiedad</h3> 
+			        <?php } if(get_locale() == "en_US") { ?>
+				         <h3>Property Type</h3> 
+			       <?php } if(get_locale() == "fr_FR") { ?>
+			       		<h3>Type de propriété</h3> 
+			       <?php } ?> 
+		
 				<?php $terms = wp_get_post_terms( $post->ID, 'type');?>
 				<ul>
 					<li><?php echo $terms[0]->name ?></li>
@@ -49,8 +56,25 @@
 					?>
 
 				</div>
-				<a href="#" class="view-more"><i class="fa fa-plus"></i> View more</a>
-				<a href="#" class="view-less"><i class="fa fa-minus"></i> View less</a>
+				<a href="#" class="view-more"><i class="fa fa-plus"></i> 
+					<?php  if(get_locale() == "es_ES"){ ?>
+			        	 Ver más
+			        <?php } if(get_locale() == "en_US") { ?>
+				         View more
+			       <?php } if(get_locale() == "fr_FR") { ?>
+			       		Afficher plus
+			       <?php } ?> 
+				</a>
+				<a href="#" class="view-less"><i class="fa fa-minus"></i> 
+				
+				 <?php  if(get_locale() == "es_ES"){ ?>
+			        	 Ver menos
+			        <?php } if(get_locale() == "en_US") { ?>
+				         View less
+			       <?php } if(get_locale() == "fr_FR") { ?>
+			       		Voir moins
+			       <?php } ?> 
+				</a>
 				
 			</div>
 		</div>

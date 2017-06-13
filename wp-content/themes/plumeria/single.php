@@ -83,7 +83,14 @@ get_header(); ?>
 				<div class="inner-wrapper">
 					<div class="property-contact-container">
 						<div class="column">
-							<h2>Register your interest</h2> 
+							
+							<?php  if(get_locale() == "es_ES"){ ?>
+					        	<h2>Registre su interés</h2>
+					        <?php } if(get_locale() == "en_US") { ?>
+						        <h2>Register your interest</h2>
+					       <?php } if(get_locale() == "fr_FR") { ?>
+					       		<h2>Enregistrez votre intérêt</h2>
+					       <?php } ?>  
 							
 							
 						</div>
@@ -102,8 +109,18 @@ get_header(); ?>
 							<p>E: <a href="mailto:reservations@plumeriarentalscr.com">reservations@plumeriarentalscr.com</a></p> -->
 						</div>
 						<div class="column">
-							 <h3>Fill out your details</h3>
-							 <?php echo do_shortcode('[contact-form-7 id="25" title="Contact form"]') ?>
+							 
+							 <?php  if(get_locale() == "es_ES"){ ?>
+					        	<h3>Rellene sus datos</h3>
+					        	<?php echo do_shortcode('[contact-form-7 id="285" title="Contact form ES"]') ?>
+					        <?php } if(get_locale() == "en_US") { ?>
+						        <h3>Fill out your details</h3>
+						        <?php echo do_shortcode('[contact-form-7 id="25" title="Contact form"]') ?>
+					       <?php } if(get_locale() == "fr_FR") { ?>
+					       		<h3>Remplissez vos coordonnées</h3>
+					       		<?php echo do_shortcode('[contact-form-7 id="286" title="Contact form FR"]') ?>
+					       <?php } ?>  
+							 
 						</div>
 					</div>
 				</div>
@@ -111,7 +128,14 @@ get_header(); ?>
 			<div class="related">
 				<div class="related-title">
 					<div class="inner-wrapper">
-						<h2>Other Properties</h2>
+						<?php  if(get_locale() == "es_ES"){ ?>
+				        	<h2>Otras propiedades</h2>
+				        <?php } if(get_locale() == "en_US") { ?>
+					       <h2>Other Properties</h2>
+				       <?php } if(get_locale() == "fr_FR") { ?>
+				       		<h2>Autres propriétés</h2>
+				       <?php } ?>  
+						
 					</div>
 				
 				</div>
@@ -162,7 +186,15 @@ get_header(); ?>
 											<h6><?php echo $terms[0]->name ?></h6>
 											<hr>
 											<?php the_excerpt() ?>
-											<a href="<?php the_permalink(); ?>" class="btn">Read more</a>
+											<a href="<?php the_permalink(); ?>" class="btn">
+												<?php  if(get_locale() == "es_ES"){ ?>
+										        	 Leer más
+										        <?php } if(get_locale() == "en_US") { ?>
+											         Read more
+										       <?php } if(get_locale() == "fr_FR") { ?>
+										       		Lire la suite
+										       <?php } ?> 
+											</a>
 										</div>
 									</div>
 			                           

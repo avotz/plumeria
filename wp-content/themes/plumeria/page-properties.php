@@ -24,7 +24,14 @@ get_header(); ?>
 			  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner1.jpg');">
 			  	  		<div class="inner">
 				  	  		<div class="item-info">
-				  	  			<span >Properties</span>
+				  	  			<?php  if(get_locale() == "es_ES"){ ?>
+							        	<span>Propiedades</span>
+							        <?php } if(get_locale() == "en_US") { ?>
+								         <span>Properties</span>
+							       <?php } if(get_locale() == "fr_FR") { ?>
+							       		<span>Propriétés</span>
+							       <?php } ?> 
+				  	  			
 				  	  			
 				  	  			
 				  	  		</div>
@@ -80,7 +87,15 @@ get_header(); ?>
 									<h6><?php echo $terms[0]->name ?></h6>
 									<hr>
 									<?php the_excerpt() ?>
-									<a href="<?php the_permalink(); ?>" class="btn">Read more</a>
+									<a href="<?php the_permalink(); ?>" class="btn">
+										<?php  if(get_locale() == "es_ES"){ ?>
+								        	 Leer más
+								        <?php } if(get_locale() == "en_US") { ?>
+									         Read more
+								       <?php } if(get_locale() == "fr_FR") { ?>
+								       		Lire la suite
+								       <?php } ?> 
+									</a>
 								</div>
 							</div>
                               
