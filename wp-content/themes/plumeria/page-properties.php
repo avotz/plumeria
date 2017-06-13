@@ -37,7 +37,7 @@ get_header(); ?>
 			  	  	  
 				</div>
 			</section>
-		<?php
+		
 
 
 			 
