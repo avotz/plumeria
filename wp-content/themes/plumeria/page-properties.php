@@ -46,7 +46,7 @@ get_header(); ?>
 
 					<?php
                         $args = array(
-                          'post_type' => 'property',
+                          'post_type' => 'properties',
                           'order' => 'ASC',
                           'posts_per_page' => 10,
                          
