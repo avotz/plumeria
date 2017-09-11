@@ -9,9 +9,28 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
+<div class="main">
+		<div class="inner">
+			<section class="banner banner-page">
+				
+			  	 
+			  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner1.jpg');">
+			  	  		<div class="inner">
+				  	  		<div class="item-info">
+				  	  			<span ><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></span>
+				  	  			
+				  	  			
+				  	  		</div>
+				  	  		
+				  	  		
+				  	  	</div>
+			  	  </div>
+			  	 
+			  
+			  	  	  
+				
+			</section>
+			<div class="inner-wrapper">
 			<section class="error-404 not-found">
 				<header class="page-header">
 					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'plumeria' ); ?></h1>
@@ -56,8 +75,8 @@ get_header(); ?>
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
+			</div>
+		</div><!-- #main -->
 	</div><!-- #primary -->
 
 <?php

@@ -47,10 +47,15 @@ h1
 img
 	max-width 100%
 	height auto
+
 .wpcf7
+.search-form
+.comment-form
 	input[type="text"]
 	input[type="email"]
 	input[type="number"]
+	input[type="search"]
+	input[type="url"]
 	textarea
 		border none
 		height 32px
@@ -58,8 +63,11 @@ img
 		outline none
 	textarea
 		height 70px
-	p 
+	p
+	input[type="search"] 
 		border-bottom 1px solid #000
+	.form-submit
+		border: none
 .txt-center
 	text-align center
 .overflow
@@ -67,6 +75,8 @@ img
 
 .wpcf7-submit
 .btn
+.search-submit
+.submit
 	border 1px solid #fff
 	font-size inherit
 	color white
@@ -91,8 +101,9 @@ img
 	&:hover
 		background-color: #CA5541
 
-
+.submit
 .btn-black
+.search-submit
 	background-color #000
 	padding 8px 30px 8px
 	&:hover
@@ -369,7 +380,13 @@ body
 	width 100%
 	height 100vh
 	position relative
-	
+	&.banner-blog
+		height 250px//400px;
+		margin-bottom: .5rem
+		.item
+			height 250px//400px;
+			&-info
+				top 70%
 	&.banner-page
 		height 250px//400px;
 		.item
@@ -503,6 +520,14 @@ body
 					font-size 3.5rem
 					font-weight 300
 					line-height 3.5rem
+		&.banner-blog
+			height 250px;
+			.item
+				height 250px;
+				&-info
+					top 70%
+					left auto
+					max-width 600px
 		&.banner-page
 			height 400px;
 			.item
@@ -779,3 +804,35 @@ article.page
 		
 			
 				
+div.blog
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	padding: 2rem 0
+	&-content
+	&-sidebar
+		width: 100%
+	
+	
+	
+	a 
+		color azul
+	ul 
+		margin-left: 45px
+	.widget
+		margin-bottom: 1rem
+	.widget_search
+		.screen-reader-text
+			display: none
+		.search-submit
+			display: none
+
+@media screen and (min-width: 900px)
+	div.blog
+		&-content
+			width: 65%
+			padding-right: 1rem
+		&-sidebar
+			width: 35%
+			border-left 1px solid #ccc
+			padding-left 2rem

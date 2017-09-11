@@ -10,6 +10,7 @@
 get_header(); ?>
 	<div class="main">
 		<div class="inner <?php echo ( get_post_type( $post ) == 'properties' ) ? 'properties' : '' ?>">
+			<?php if ( get_post_type( $post ) == 'properties' ) : ?>
 			<section class="banner <?php echo ( get_post_type( $post ) == 'properties' ) ? 'banner-property' : 'banner-page' ?>">
 				<div class="owl-carousel ">
 
@@ -34,6 +35,28 @@ get_header(); ?>
 			  	  	  
 				</div>
 			</section>
+			<?php else : ?>
+		
+			<section class="banner banner-page">
+			<?php if ( has_post_thumbnail() ) :
+
+			  	 	$id = get_post_thumbnail_id($post->ID);
+			  	 	$thumb_url = wp_get_attachment_image_src($id,'full', true);
+			  	 	?>
+			    	
+					 <div class="item" style="background-image: url('<?php echo $thumb_url[0] ?>');">
+			  	  		
+			  	  	</div>
+					
+				<?php else : ?>
+			  	  <div class="item" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/banner1.jpg');">
+			  	  		
+			  	  </div>
+			  	 
+			  	<?php endif; ?>
+			</section>
+			<?php endif; ?>
+			<?php if ( get_post_type( $post ) == 'properties' ) : ?>
 			<header class="entry-header">
 				<div class="inner-wrapper">
 					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?> 
@@ -48,7 +71,9 @@ get_header(); ?>
 
 					?>
 				</div>
+				
 			</header>
+			<?php endif ?>
 			<div class="inner-wrapper">
 			<?php
 
@@ -58,16 +83,24 @@ get_header(); ?>
 					
 					if ( get_post_type( $post ) == 'properties' ) : 
 						 get_template_part( 'template-parts/content', 'property' ); 
-					else:
-						get_template_part( 'template-parts/content', get_post_format() );
-						
-						/*the_post_navigation();*/
-						if ( comments_open() || get_comments_number() ) :
-							comments_template();
-						endif;
-						
-						get_sidebar();
-
+					else: ?>
+						<div class="blog">
+							<div class="blog-content">
+							
+								<?php
+								get_template_part( 'template-parts/content', get_post_format() );
+								
+								/*the_post_navigation();*/
+								if ( comments_open() || get_comments_number() ) :
+									comments_template();
+								endif;
+								?>
+							</div>
+							<div class="blog-sidebar">
+								<?php get_sidebar(); ?>
+							</div>
+						</div>
+<?php
 					endif;
 
 
@@ -79,6 +112,7 @@ get_header(); ?>
 				
 			?>
 			</div>
+			<?php if ( get_post_type( $post ) == 'properties' ) : ?>
 			<div class="property-contact">
 				<div class="inner-wrapper">
 					<div class="property-contact-container">
@@ -211,6 +245,7 @@ get_header(); ?>
 					</div>
 				</section>
 			</div>
+			<?php endif; ?>
 
 		</div><!-- #main -->
 	</div><!-- #primary -->
