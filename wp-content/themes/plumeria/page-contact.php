@@ -73,7 +73,11 @@ get_header(); ?>
 					?>
 				
 					<div class="contact-map">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15684.919025455205!2d-85.4281962!3d10.639251!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x756af3ebd14361a2!2sAvotz+Web+Works!5e0!3m2!1ses-419!2s!4v1442615525574" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15689.76302526861!2d-85.694911!3d10.544641!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5bc2a3db1f37cdad!2sPlumeria+Rentals!5e0!3m2!1ses-419!2s!4v1505835824034" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					 <div class="num">
+					  US: (+506) 8867-0268 <br>
+						  (+506)  8329-8484  
+					 </div>
 					</div>
 				</div>
 			</div>
